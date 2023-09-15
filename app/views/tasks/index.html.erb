@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Tasks</title>
+</head>
+<body>
+<style>
+    .link{
+      font-size: 20px;
+      font-style: bold;
+      
+
+    }
+
+    .link:hover{
+      color: red;
+      cursor: pointer;
+
+    }
+
+    body {
+        background-color: #F6F6F3;
+        font-family: Arial, sans-serif; /* Example: Use a common font */
+      }
+      
+      table {
+        margin: 0 auto;
+        width: 80%; /* Example: Set a maximum width for the table */
+        border-collapse: collapse;
+        background-color: #fff; /* Example: Add a white background to the table */
+      }
+      
+      thead {
+        background-color: #333; /* Example: Dark background color for table headers */
+        color: #fff; /* Example: White text color for table headers */
+      }
+      
+      table, th, td {
+        border: 1px solid #ddd; /* Example: Add borders to the table, th, and td */
+        padding: 8px;
+        text-align: left;
+      }
+      
+      th {
+        font-weight: bold; /* Example: Make table headers bold */
+      }
+      
+      tr:nth-child(even) {
+        background-color: #f2f2f2; /* Example: Alternate row background color */
+      }
+      
+      a {
+        text-decoration: none; /* Example: Remove underlines from links */
+        color: #007bff; /* Example: Blue link color */
+      }
+      
+      a:hover {
+        text-decoration: underline; /* Example: Add underline on hover */
+      }
+        
+</style>
+
+  <h1>Tasks</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Completed</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @tasks.each do |task| %>
+      <tr>
+        <td><%= task.title %></td>
+        <td><%= task.description %></td>
+        <td><%= task.completed ? 'Yes' : 'No' %></td>
+        <td><%= link_to 'Show', task %></td>
+        <td><%= link_to 'Edit', edit_task_path(task) %></td>
+        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+  <div class="link">
+    <%= link_to 'New Task', new_task_path %>  
+  </div>
+  
+</body>
+</html>

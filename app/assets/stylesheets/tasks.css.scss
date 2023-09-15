@@ -1,0 +1,44 @@
+/* app/assets/stylesheets/tasks.css.scss */
+
+body {
+    background-color: #F6F6F3;
+    font-family: Arial, sans-serif; /* Example: Use a common font */
+  }
+  
+  table {
+    margin: 0 auto;
+    width: 80%; /* Example: Set a maximum width for the table */
+    border-collapse: collapse;
+    background-color: #fff; /* Example: Add a white background to the table */
+  }
+  
+  thead {
+    background-color: #333; /* Example: Dark background color for table headers */
+    color: #fff; /* Example: White text color for table headers */
+  }
+  
+  table, th, td {
+    border: 1px solid #ddd; /* Example: Add borders to the table, th, and td */
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    font-weight: bold; /* Example: Make table headers bold */
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2; /* Example: Alternate row background color */
+  }
+  
+  a {
+    text-decoration: none; /* Example: Remove underlines from links */
+    color: #007bff; /* Example: Blue link color */
+  }
+  
+  a:hover {
+    text-decoration: underline; /* Example: Add underline on hover */
+  }
+  
+  /* Add more styles as needed */
+  

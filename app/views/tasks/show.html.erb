@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Show Task</title>
+</head>
+<body>
+  <h1>Task Details</h1>
+
+  <dl>
+    <dt>Title:</dt>
+    <dd><%= @task.title %></dd>
+
+    <dt>Description:</dt>
+    <dd><%= @task.description %></dd>
+
+    <dt>Completed:</dt>
+    <dd><%= @task.completed ? 'Yes' : 'No' %></dd>
+  </dl>
+
+  <%= link_to 'Edit', edit_task_path(@task) %> |
+  <%= link_to 'Back', tasks_path %>
+</body>
+</html>
